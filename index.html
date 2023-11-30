@@ -3,85 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tech Shop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #666;
-            padding: 0.5em;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1em;
-        }
-
-        section {
-            padding: 1em;
-        }
-
-        .product {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 1em;
-            margin: 1em;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Tech Shop</h1>
-    </header>
-
     <nav>
-        <a href="#">Home</a>
-        <a href="#" id="showProducts">Products</a>
-        <input type="text" id="searchInput" placeholder="Search products...">
+        <div class="logo">
+            <img src="./Shop%20Logo.F.png" alt="logo">
+        </div>
+        <div class="items">
+            <a href="index.html">Home</a>
+            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
     </nav>
 
     <section id="productList">
         <div class="product" data-name="RAM">
             <h2>RAM</h2>
-            <p>Description of RAM. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Description of RAM. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <p>Price: $99.99</p>
-            <button onclick="viewProduct('RAM')">View Details</button>
+            <button onclick="viewProduct('RAM', '$99.99')">View Details</button>
         </div>
 
         <div class="product" data-name="CPU">
             <h2>CPU</h2>
             <p>Description of CPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('CPU')">View Details</button>
+            <button onclick="viewProduct('CPU', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>COOLER</h2>
+            <p>Description of Cooler. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('Cooler', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>Casing</h2>
+            <p>Description of Casing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('Casing', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>GPU</h2>
+            <p>Description of GPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('GPU', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>Thermal Paste</h2>
+            <p>Description of Thermal Paste. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('Thermal Paste', '$99.99')">View Details</button>
         </div>
 
         <!-- Add more product elements as needed -->
@@ -99,35 +76,7 @@
         <p>&copy; 2023 Tech Shop. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById('showProducts').addEventListener('click', function() {
-            document.getElementById('productList').style.display = 'flex';
-            document.getElementById('productDetails').style.display = 'none';
-        });
-
-        function viewProduct(productName) {
-            document.getElementById('productList').style.display = 'none';
-            document.getElementById('productDetails').style.display = 'block';
-
-            // Simulated product data (in a real-world scenario, this data would come from a server)
-            const products = {
-                'RAM': { name: 'RAM', description: 'Description of RAM. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$99.99' },
-                'CPU': { name: 'CPU', description: 'Description of CPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', price: '$199.99' },
-                // Add more products as needed
-            };
-
-            const product = products[productName];
-
-            document.getElementById('productName').textContent = product.name;
-            document.getElementById('productDescription').textContent = product.description;
-            document.getElementById('productPrice').textContent = 'Price: ' + product.price;
-        }
-
-        function goBack() {
-            document.getElementById('productList').style.display = 'flex';
-            document.getElementById('productDetails').style.display = 'none';
-        }
-    </script>
-
+<!--Adding Javascript-->
+<script src="main.js"></script>
 </body>
 </html>
