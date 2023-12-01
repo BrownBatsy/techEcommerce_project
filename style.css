@@ -78,3 +78,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.product > img{
+    width: 4rem;
+    height: 3rem;
+    border-radius: 8px;
