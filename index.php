@@ -14,8 +14,6 @@ $conn = mysqli_connect($server, $username, $password, $database);
 //error handling 
 if (!$conn){
     die("Error".mysqli_connect_error());
-} else {
-    echo "DATABASE CONNECTED!";
 }
 
 $sql = "select * from gpus";
@@ -92,7 +90,7 @@ $gpus = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     </section>
 
-    <section id="productDetails" style="display: none; height: fit-content">
+    <section id="productDetails" style="display: none;>
         <h2 id="productName"></h2>
         <p id="productDescription"></p>
         <p id="productPrice"></p>
@@ -164,6 +162,35 @@ $gpus = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </footer>
 
 <!--Adding Javascript-->
-<script src="main.js"></script>
+<script type="text/javascript">
+    document.getElementById('showProducts').addEventListener('click', function() {
+        document.getElementById('productList').style.display = 'flex';
+        document.getElementById('productDetails').style.display = 'none';
+    });
+
+    function viewProduct(productName, price) {
+        document.getElementById('productList').style.display = 'none';
+        document.getElementById('productDetails').style.display = 'block';
+        document.getElementById('productDetails').style.height = 'fit-content';
+
+        // Simulated product data (in a real-world scenario, this data would come from a server)
+        const products = {
+            'default': { name: `${productName}`, description: `Description of ${productName}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, price: `${price}` },
+            // Add more products as needed
+
+        };
+        productName = 'default';
+        const product = products[productName];
+        console.log(products[productName]);
+        document.getElementById('productName').textContent = product.name;
+        document.getElementById('productDescription').textContent = product.description;
+        document.getElementById('productPrice').textContent = 'Price: ' + product.price;
+    }
+
+    function goBack() {
+        document.getElementById('productList').style.display = 'flex';
+        document.getElementById('productDetails').style.display = 'none';
+    }
+</script>
 </body>
 </html>
