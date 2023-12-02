@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tech Shop</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Shop%20Logo.F.png" alt="logo">
+        </div>
+        <div class="items">
+            <a href="index.html">Home</a>
+            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </nav>
+
+    <section id="productList">
+        <div class="product" data-name="RAM">
+            <img src="macy.jpg" alt="Cooler Image">
+            <h2>HDD/SSD1</h2>
+            <p>Description of RAM. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Price: $99.99</p>
+            <button onclick="viewProduct('HDD/SSD1', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="CPU">
+            <h2>HDD/SSD2</h2>
+            <p>Description of CPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('HDD/SSD2', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>HDD/SSD3</h2>
+            <p>Description of Cooler. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('HDD/SSD3', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>HDD/SSD4</h2>
+            <p>Description of Casing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('HDD/SSD4', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>HDD/SSD5</h2>
+            <p>Description of GPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('HDD/SSD5', '$99.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler">
+            <h2>HDD/SSD6</h2>
+            <p>Description of Thermal Paste. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('HDD/SSD6', '$99.99')">View Details</button>
+        </div>
+
+        <!-- Add more product elements as needed -->
+
+    </section>
+
+    <section id="productDetails" style="display: none;">
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tech Shop. All rights reserved.</p>
+    </footer>
+
+<!--Adding Javascript-->
+<script src="main.js"></script>
+</body>
+</html>
