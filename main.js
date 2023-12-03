@@ -6,7 +6,7 @@ document.getElementById('showProducts').addEventListener('click', function() {
 function viewProduct(productName, price) {
     document.getElementById('productList').style.display = 'none';
     document.getElementById('productDetails').style.display = 'block';
-    document.getElementById('productDetails').style.height = '80.2vh';
+    document.getElementById('productDetails').style.height = 'fit-content';
 
     // Simulated product data (in a real-world scenario, this data would come from a server)
     const products = {

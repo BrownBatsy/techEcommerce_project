@@ -59,6 +59,10 @@ section {
     padding: 5rem 0;
 }
 
+#productDetails{
+    height: fit-content;
+}
+
 .product {
     height: 30vh;
     max-width: 400px;
@@ -83,4 +87,10 @@ footer {
     width: 4rem;
     height: 3rem;
     border-radius: 8px;
+}
+
+/*Table Styling*/
+table, td, th{
+    border: 1px solid black;
+    padding: 1rem;
 }
