@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desktop Components - Computer Components Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .items a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+
+        #searchInput {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .productList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #productDetails {
+            display: none;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="./Shop%20Logo.F.png" alt="logo">
+        </div>
+        <div class="items">
+            <a href="index.php">Home</a>
+            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </nav>
+
+    <section class="productList">
+        <div class="product" data-name="Processor">
+            <img src="processor.jpg" alt="Processor">
+            <h2>Processor</h2>
+            <p>Choose the right processor for your desktop.</p>
+            <a href="Processor.html">View Processors</a>
+        </div>
+
+        <!-- Add similar product elements as needed -->
+
+        <div class="product" data-name="Monitor">
+            <img src="monitor.jpg" alt="Monitor">
+            <h2>Monitor</h2>
+            <p>Enhance your desktop setup with high-quality monitors.</p>
+            <a href="monitor.html">View Monitors</a>
+        </div>
+
+        <div class="product" data-name="RAM">
+            <img src="monitor.jpg" alt="RAM">
+            <h2>RAM</h2>
+            <p>Enhance your desktop setup with high-quality RAM.</p>
+            <a href="ram.html">View Monitors</a>
+        </div>
+
+        <div class="product" data-name="HDD/SSD">
+            <img src="monitor.jpg" alt="HDD/SSD">
+            <h2>HDD/SSD</h2>
+            <p>Enhance your desktop setup with high-quality HDD/SSD.</p>
+            <a href="harddsik.html">View Monitors</a>
+        </div>
+
+        <div class="product" data-name="Power supply">
+            <img src="monitor.jpg" alt="Power supply">
+            <h2>Power Supply</h2>
+            <p>Enhance your desktop setup with high-quality Power Supply.</p>
+            <a href="power supply.html">View Monitors</a>
+        </div>
+
+        <div class="product" data-name="Casing Cooler">
+            <img src="monitor.jpg" alt="Casing Cooler">
+            <h2>Casing Cooler</h2>
+            <p>Enhance your desktop setup with high-quality Casing Cooler.</p>
+            <a href="casing cooler.html">View Monitors</a>
+        </div>
+
+        <div class="product" data-name="GPU">
+            <img src="monitor.jpg" alt="GPU">
+            <h2>GPU</h2>
+            <p>Enhance your desktop setup with high-quality GPU.</p>
+            <a href="gpu.html">View Monitors</a>
+        </div>
+    </section>
+
+    <section id="productDetails">
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tech Shop. All rights reserved.</p>
+    </footer>
+
+    <!--Adding Javascript-->
+    <script src="main.js"></script>
+</body>
+
+</html>

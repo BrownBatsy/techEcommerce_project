@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tech Shop - Monitors</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Shop%20Logo.F.png" alt="logo">
+        </div>
+        <div class="items">
+            <a href="index.php">Home</a>
+            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </nav>
+
+    <section id="productList">
+        <div class="product" data-name="Monitor1">
+            <h2>Monitor 1</h2>
+            <p>Description of Monitor 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Price: $199.99</p>
+            <button onclick="viewProduct('Monitor 1', '$199.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Monitor2">
+            <h2>Monitor 2</h2>
+            <p>Description of Monitor 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $299.99</p>
+            <button onclick="viewProduct('Monitor 2', '$299.99')">View Details</button>
+        </div>
+
+        <!-- Add more monitor products as needed -->
+
+    </section>
+
+    <section id="productDetails" style="display: none;">
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tech Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- Adding Javascript -->
+    <script src="main.js"></script>
+</body>
+
+</html>

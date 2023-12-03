@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tech Shop - Casing Cooler</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Shop%20Logo.F.png" alt="logo">
+        </div>
+        <div class="items">
+            <a href="index.php">Home</a>
+            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </nav>
+
+    <section id="productList">
+        <div class="product" data-name="Casing1">
+            <h2>Casing 1</h2>
+            <p>Description of Casing 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Price: $89.99</p>
+            <button onclick="viewProduct('Casing 1', '$89.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Casing2">
+            <h2>Casing 2</h2>
+            <p>Description of Casing 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $109.99</p>
+            <button onclick="viewProduct('Casing 2', '$109.99')">View Details</button>
+        </div>
+
+        <!-- Add more casing products as needed -->
+
+        <div class="product" data-name="Cooler1">
+            <h2>Cooler 1</h2>
+            <p>Description of Cooler 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $79.99</p>
+            <button onclick="viewProduct('Cooler 1', '$79.99')">View Details</button>
+        </div>
+
+        <div class="product" data-name="Cooler2">
+            <h2>Cooler 2</h2>
+            <p>Description of Cooler 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $99.99</p>
+            <button onclick="viewProduct('Cooler 2', '$99.99')">View Details</button>
+        </div>
+
+        <!-- Add more cooler products as needed -->
+
+    </section>
+
+    <section id="productDetails" style="display: none;">
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tech Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- Adding Javascript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
