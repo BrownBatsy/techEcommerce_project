@@ -62,7 +62,7 @@ $gpus = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <h2>Laptop</h2>
             <p>Description of CPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('Laptop', '$99.99')">View Details</button>
+            <button onclick="viewProduct('Laptop', '$99.99')"><a href = "laptoplists.php">View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">
@@ -76,7 +76,7 @@ $gpus = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <h2>Processor</h2>
             <p>Description of Casing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('Processor', '$99.99')">View Details</button>
+            <button onclick="viewProduct('Processor', '$99.99')"><a href>View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">
@@ -95,73 +95,6 @@ $gpus = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         <!-- Add more product elements as needed -->
 
-    </section>
-
-    <section id="productDetails" style="display: none;">
-        <h2 id="productName"></h2>
-        <p id="productDescription"></p>
-        <p id="productPrice"></p>
-        <table>
-            <tr>
-                <th>
-                    Brand
-                </th>
-                <th>
-                    Model
-                </th>
-                <th>
-                    Chip
-                </th>
-                <th>
-                    Memory
-                </th>
-                <th>
-                    GPU_Clock
-                </th>
-                <th>
-                    Memory_Clock
-                </th>
-            </tr>
-            <?php foreach($gpus as $items): ?>
-                <div class="container d-flex justify-content-center card my-3 w-75">
-                    <div class="card-body text-center">
-                            <tr>
-                                <td>
-                                    <?php
-                                    echo $items['Brand'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Model'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Chip'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Memory'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['GPU_Clock'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Memory_Clock'] . " ";
-                                    ?>
-                                </td>
-                            </tr>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </table>
-        <button onclick="goBack()">Go Back</button>
     </section>
 
     <footer>
