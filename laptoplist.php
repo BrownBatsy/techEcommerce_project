@@ -1,7 +1,8 @@
 <?php
-        require_once("head.php")
-        $sql = "select * from laptpos";
-        $result = mysqli_query($conn, $sql);
+    include ("heda.php");
+    $sql = "select * from laptops";
+    $result = mysqli_query($conn, $sql);
+    $laptops = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -9,87 +10,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
     <title>Tech Shop</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="./Shop%20Logo.F.png" alt="logo">
-        </div>
-        <div class="items">
-            <a href="index.php">Home</a>
-            <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
-            <input type="text" id="searchInput" placeholder="Search products...">
-        </div>
-    </nav>
-
-
-    <section id="productDetails" style="display: none;">
+    <section id="productDetails">
         <h2 id="productName"></h2>
         <p id="productDescription"></p>
         <p id="productPrice"></p>
-        <table>
-            <tr>
-                <th>
-                    Brand
-                </th>
-                <th>
-                    Model
-                </th>
-                <th>
-                    Chip
-                </th>
-                <th>
-                    Memory
-                </th>
-                <th>
-                    GPU_Clock
-                </th>
-                <th>
-                    Memory_Clock
-                </th>
-            </tr>
-            <?php foreach($gpus as $items): ?>
-                <div class="container d-flex justify-content-center card my-3 w-75">
-                    <div class="card-body text-center">
-                            <tr>
-                                <td>
-                                    <?php
-                                    echo $items['Brand'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Model'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Chip'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Memory'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['GPU_Clock'] . " ";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo $items['Memory_Clock'] . " ";
-                                    ?>
-                                </td>
-                            </tr>
+        <div class="laptops d-flex flex-row flex-wrap w-100">
+            <?php foreach ($laptops as $items): ?>
+                    <div class="items d-flex flex-column container card-body align-items-center card my-3 mr-3">
+                        <div class="model">
+                           <b>Model:</b> 
+                            <?php
+                            echo $items['Model'] . " ";
+                            ?>
+                        </div>
+                        <div class="price">
+                            <b>Price:</b> 
+                            <?php
+                            echo $items['Price'] . " ";
+                            ?>
+                        </div>
                     </div>
-                </div>
             <?php endforeach; ?>
-        </table>
-        <button onclick="goBack()">Go Back</button>
+        </div>
     </section>
 
     <footer>
@@ -97,6 +43,6 @@
     </footer>
 
 <!--Adding Javascript-->
-<script src="main.js"></script>
+<!-- <script src="main.js"></script> -->
 </body>
 </html>
