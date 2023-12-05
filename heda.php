@@ -7,11 +7,11 @@ $etag = md5_file('style.css');
 header("ETag: $etag");
 
 //database connection establishment 
-//databse name: techdata // modify this part when needed 
+//databse name: tech // modify this part when needed 
 $server="localhost";
 $username="root";
 $password="";
-$database="techdata";
+$database="tech";
 $conn = mysqli_connect($server, $username, $password, $database);
 
 

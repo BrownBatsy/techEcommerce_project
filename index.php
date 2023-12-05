@@ -50,9 +50,9 @@ if (!$conn){
 
         <div class="product" data-name="Cooler">
             <h2>Processor</h2>
+            <h1>To process complex stuffs</h1>
             <p></p>
-            <p>Price: $199.99</p>
-            <button onclick="viewProduct('Processor')"><a href>View Details</a></button>
+            <button onclick="viewProduct('Processor')"><a href = "Processor.php">View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">

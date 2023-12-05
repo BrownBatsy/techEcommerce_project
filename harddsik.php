@@ -1,8 +1,8 @@
 <?php
     include ("heda.php");
-    $sql = "select * from ram";
+    $sql = "select * from storagedevices";
     $result = mysqli_query($conn, $sql);
-    $ram = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $storagedevices = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +18,8 @@
         <h2 id="productName"></h2>
         <p id="productDescription"></p>
         <p id="productPrice"></p>
-        <div class="ram d-flex flex-row flex-wrap w-100">
-            <?php foreach ($ram as $items): ?>
+        <div class="storagedevices d-flex flex-row flex-wrap w-100">
+            <?php foreach ($storagedevices as $items): ?>
                     <div class="items d-flex flex-column container card-body align-items-center card my-3 mr-3">
                         <div class="model">
                            <b>Model:</b> 
