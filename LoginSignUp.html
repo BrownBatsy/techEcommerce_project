@@ -1,0 +1,127 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login/Signup - Computer Components Store</title>
+    /* style.css */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+    }
+    
+    form {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    .login-form {
+        margin-right: 10px;
+    }
+    
+    .signup-form {
+        margin-left: 10px;
+    }
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="login.php" method="post" class="login-form">
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="signup.php" method="post" class="signup-form">
+                <h2>Sign Up</h2>
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- login.php -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Add your authentication logic here (e.g., check against a database)
+    // For simplicity, let's assume a hardcoded username and password
+    $validUsername = "user";
+    $validPassword = "password";
+
+    if ($username == $validUsername && $password == $validPassword) {
+        echo "Login successful!";
+    } else {
+        echo "Invalid username or password!";
+    }
+}
+?>
+
+<!-- signup.php -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $newUsername = $_POST["new-username"];
+    $newPassword = $_POST["new-password"];
+
+    // Add your user registration logic here (e.g., insert into a database)
+    // For simplicity, let's assume successful registration
+    echo "User registration successful!";
+}
+?>
