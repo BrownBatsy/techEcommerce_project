@@ -31,42 +31,42 @@ if (!$conn){
             <h2>RAM</h2>
             <p>Description of RAM. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <p>Price: $99.99</p>
-            <button onclick="viewProduct('RAM', '$99.99')">View Details</button>
+            <button onclick="viewProduct('RAM')">View Details</button>
         </div>
 
         <div class="product" data-name="CPU">
             <h2>Laptop</h2>
             <p>Description of CPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('Laptop', '$99.99')"><a href = "laptoplist.php">View Details</a></button>
+            <button onclick="viewProduct('Laptop')"><a href = "laptoplist.php">View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">
             <h2>COOLER</h2>
             <p>Description of Cooler. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('Cooler', '$99.99')">View Details</button>
+            <button onclick="viewProduct('Cooler')"><a href = "casing cooler.php">View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">
             <h2>Processor</h2>
-            <p>Description of Casing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p></p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('Processor', '$99.99')"><a href>View Details</a></button>
+            <button onclick="viewProduct('Processor')"><a href>View Details</a></button>
         </div>
 
         <div class="product" data-name="Cooler">
             <h2>GPU</h2>
             <p>Description of GPU. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('GPU', '$99.99')">View Details</button>
+            <button onclick="viewProduct('GPU')">View Details</button>
         </div>
 
         <div class="product" data-name="Cooler">
             <h2>HDD/SSD</h2>
             <p>Description of Thermal Paste. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $199.99</p>
-            <button onclick="viewProduct('HDD/SSD', '$99.99')">View Details</button>
+            <button onclick="viewProduct('HDD/SSD')">View Details</button>
         </div>
 
         <!-- Add more product elements as needed -->
