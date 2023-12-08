@@ -42,7 +42,7 @@ if (!$_SESSION['userId']) {
     <!-- </div> -->
     <div class="items">
         <a href="index.php">Home</a>
-        <a target="_blank" href="https://matias.ma/nsfw/" id="showProducts">Products</a>
+        
         <a href="cart.php">Cart</a>
         <input type="text" id="searchInput" placeholder="Search products...">
 

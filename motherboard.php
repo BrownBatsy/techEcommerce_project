@@ -23,12 +23,12 @@
             <?php foreach ($monitors as $items): ?>
                 <tr>
                     <td><?php
-                            echo  "<h6>".$items['Model'] ."</h6>". "Price: ". "<b>". $items['Price'] . "</b> BDT ";
+                            echo  "<h6>".$items['Model'] ."</h6>". "Price: ". "<b>". $items['price'] . "</b> BDT ";
                             ?></td>
                     <td>
                         <form method="POST" action="cart.php">
                             <input type="hidden" name="model" value="<?=$items['Model']?>">
-                            <input type="hidden" name="price" value="<?=$items['Price']?>">
+                            <input type="hidden" name="price" value="<?=$items['price']?>">
                             <input type="submit" class="btn btn-primary"value="ADD TO CART"></input>
                         </form>
                         <!-- <Button class="btn btn-primary" onclick="testFun($items)"value="ADD TO CART"></Button> -->
