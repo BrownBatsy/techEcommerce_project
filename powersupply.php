@@ -1,8 +1,8 @@
 <?php
 include("heda.php");
-$sql = "select * from storagedevices";
+$sql = "select * from powersupplies";
 $result = mysqli_query($conn, $sql);
-$storagedevices = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$powersupplies = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $storagedevices = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <p id="productPrice"></p>
         <div class="Container border mb-3">
             <table class="table">
-                <?php foreach ($storagedevices as $items): ?>
+                <?php foreach ($powersupplies as $items): ?>
                     <tr>
                         <td>
                             <?php

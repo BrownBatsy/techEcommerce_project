@@ -1,8 +1,8 @@
 <?php
     include ("heda.php");
-    $sql = "select * from laptops";
+    $sql = "select * from casingcoolers";
     $result = mysqli_query($conn, $sql);
-    $laptops = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $casingcoolers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +20,15 @@
         <p id="productPrice"></p>
         <div class="Container border mb-3">
             <table class="table">
-            <?php foreach ($laptops as $items): ?>
-                <tr>
+            <?php foreach ($casingcoolers as $items): ?>
+                    <tr>
                     <td><?php
-                            echo  "<h6>".$items['Model'] ."</h6>". "Price: ". "<b>". $items['price'] . "</b> BDT ";
+                            echo  "<h6>".$items['Model'] ."</h6>". "Price: ". "<b>". $items['Price'] . "</b> BDT ";
                             ?></td>
                     <td>
                         <form method="POST" action="cart.php">
                             <input type="hidden" name="model" value="<?=$items['Model']?>">
-                            <input type="hidden" name="price" value="<?=$items['price']?>">
+                            <input type="hidden" name="price" value="<?=$items['Price']?>">
                             <input type="submit" class="btn btn-primary"value="ADD TO CART"></input>
                         </form>
                         <!-- <Button class="btn btn-primary" onclick="testFun($items)"value="ADD TO CART"></Button> -->
