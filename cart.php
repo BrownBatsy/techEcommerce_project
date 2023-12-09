@@ -114,6 +114,21 @@ if (isset($_POST["model"]) && $_POST["price"]) {
                         </td>
                     </tr>
                 <?php endforeach; ?>
+                
+                <?php
+                session_start();
+
+// Clear all cart-related session variables
+                unset($_SESSION["productNameArr"]);
+                unset($_SESSION["productPriceArr"]);
+                unset($_SESSION["productQuantityArr"]);
+                unset($_SESSION["total"]);
+
+// Redirect back to the cart page
+                header("Location: cart.php");
+                exit();
+                ?>
+
 
                 <!-- Add more rows as needed -->
             </tbody>
@@ -124,6 +139,7 @@ if (isset($_POST["model"]) && $_POST["price"]) {
         </h3>
 
         <a href="clear.php" class="cart-btn">Proceed to Checkout</a>
+        <a href="cart.php" class="cart-btn">Clear Cart</a>
     </div>
 </body>
 
